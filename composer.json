@@ -1,0 +1,27 @@
+{
+    "name": "ziptied/ledger",
+    "description": "connector package to log ledger",
+    "autoload": {
+        "psr-4": {
+            "Ziptied\\Ledger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ziptied\\Ledger\\LedgerServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Zachary Oakes",
+            "email": "zachary.oakes@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.7",
+        "laravel/framework": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0"
+    }
+}
