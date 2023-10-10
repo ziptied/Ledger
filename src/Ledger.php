@@ -9,9 +9,7 @@ use Illuminate\Http\Client\PendingRequest;
 class Ledger
 {
     private string $apiToken;
-
-    private string $baseUri = 'http://logs.revealit.test/api/';
-
+    private string $baseUrl;
     private PendingRequest $httpClient;
 
     public static function factory(): Ledger
@@ -21,6 +19,7 @@ class Ledger
 
     public function make(): Client
     {
+        $this->baseUri = config('ledger.uri').'/api/';
         $this->httpClient
             ->acceptJson()
             ->asJson()

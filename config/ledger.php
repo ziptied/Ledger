@@ -20,12 +20,35 @@ return [
     | Ledger Project Identifier
     |--------------------------------------------------------------------------
     |
-    | Specify the unique identifier for your LogSnag project. It's used
-    | to associate events with a specific project within your LogSnag account.
-    | You can find this identifier in the project settings of your LogSnag dashboard.
+    | Specify the unique identifier for your Ledger project. It's used
+    | to associate events with a specific project within your Ledger account.
     |
     */
 
-    'project' => env('LOGSNAG_PROJECT'),
+    'project' => env('LEDGER_PROJECT'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ledger Default Channel ID
+    |--------------------------------------------------------------------------
+    |
+    | Specify the unique Channel for your Ledger Events. It's used
+    | to associate events with a specific Channel within your Ledger account.
+    |
+    */
+
+    'channel' => env('LEDGER_CHANNEL'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ledger Project URL
+    |--------------------------------------------------------------------------
+    |
+    | Specify the unique URL for your Ledger project. It's used
+    | to pass events to your Ledger account.
+    |
+    */
+
+    'uri' => env('LEDGER_URI'),
 
 ];

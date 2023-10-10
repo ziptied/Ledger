@@ -15,14 +15,12 @@ class Log
 
     public function publish(array $payload): LogResponse
     {
-        if ( ! array_key_exists('user_project', $payload)) {
-            $payload['user_project'] = config('ledger.project');
-        }
+        $payload['user_project'] ??= config('ledger.project');
+        $payload['channel'] ??= config('ledger.channel');
 
         $response = $this->client
             ->post('log', $payload)
             ->json()['data'];
-        ray($response);
 
         return LogResponse::from($response);
     }
