@@ -1,13 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziptied\Ledger;
 
 use Illuminate\Http\Client\PendingRequest;
+
 class Ledger
 {
     private string $apiToken;
 
-    private string $baseUri = 'http://logs.revealit.test';
+    private string $baseUri = 'http://logs.revealit.test/api/';
 
     private PendingRequest $httpClient;
 
