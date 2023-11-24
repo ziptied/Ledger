@@ -18,10 +18,8 @@ class Log
     {
         $payload['user_project'] ??= config('ledger.project');
         $payload['channel'] ??= config('ledger.channel');
-//        $response = $this->client
-//            ->post('log', $payload)
-//            ->json()['data'];
-        LogJob::dispatch($payload)->onQueue('default');
+
+        LogJob::dispatch($payload)->onQueue(config('ledger.queue'));
         return LogResponse::from([
             'user_project' => $payload['user_project'],
             'channel' => $payload['channel'],

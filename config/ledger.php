@@ -51,4 +51,16 @@ return [
 
     'uri' => env('LEDGER_URI'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Ledger Queue name
+    |--------------------------------------------------------------------------
+    |
+    | Specify the Queue name for your Ledger events to be processed on.
+    | Ensure this queue has workers to complete sending of events.
+    |
+    */
+
+    'queue' => env('LEDGER_URI', 'default'),
+
 ];
