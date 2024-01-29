@@ -61,6 +61,6 @@ return [
     |
     */
 
-    'queue' => env('LEDGER_URI', 'default'),
+    'queue' => env('LEDGER_QUEUE', 'default'),
 
 ];
